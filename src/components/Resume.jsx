@@ -45,13 +45,13 @@ const Resume = ({ personalInfo, educationInfo, workExpInfo, skills }) => {
           <div key={index} className="workDiv">
             <div className="workDivSub">
               <p style={{ fontWeight: "bold" }}>{work.position}</p>
-              <p style={{ fontStyle: "italic" }}>{work.company}</p>
-            </div>
-            <div className="workDivSub">
-              <p style={{ fontStyle: "italic" }}>{work.location}</p>
               <p>
                 {`${handleDate(work.startDate)} - ${handleDate(work.endDate)}`}
               </p>
+            </div>
+            <div className="workDivSub">
+              <p style={{ fontStyle: "italic" }}>{work.company}</p>
+              <p style={{ fontStyle: "italic" }}>{work.location}</p>
             </div>
             <p>{work.description}</p>
           </div>
