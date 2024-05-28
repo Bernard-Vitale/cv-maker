@@ -30,7 +30,16 @@ const WorkExpInput = ({ workExp, setWorkExp }) => {
     <>
       {workExp.map(
         (
-          { id, position, company, location, startDate, endDate, description },
+          {
+            id,
+            position,
+            company,
+            location,
+            startDate,
+            endDate,
+            description,
+            stillWorking,
+          },
           index
         ) => (
           <div key={id} className="forms workForms">
@@ -89,11 +98,26 @@ const WorkExpInput = ({ workExp, setWorkExp }) => {
                   type="month"
                   id={`endInput`}
                   value={endDate || ""}
+                  disabled={stillWorking}
                   onChange={(e) =>
                     handleInputChange(id, "endDate", e.target.value)
                   }
                 />
               </div>
+            </div>
+            <div style={{ padding: "10px" }} className="stillCheckBox">
+              <label htmlFor={`stillWorking`}>Still Working Here:</label>
+              <input
+                type="checkbox"
+                id={`stillWorking`}
+                checked={stillWorking || false}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    handleInputChange(id, "endDate", "");
+                  }
+                  handleInputChange(id, "stillWorking", e.target.checked);
+                }}
+              />
             </div>
             <div className="formItem">
               <textarea

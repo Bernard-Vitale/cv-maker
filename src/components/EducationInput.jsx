@@ -28,7 +28,10 @@ const EducationInput = ({ educationInfo, setEducationInfo }) => {
   return (
     <>
       {educationInfo.map(
-        ({ id, name, degree, location, startDate, endDate }, index) => (
+        (
+          { id, name, degree, location, startDate, endDate, stillAttending },
+          index
+        ) => (
           <div key={id} className="forms educationForms">
             <h3>Education {index + 1}:</h3>{" "}
             <div className="formItem">
@@ -83,11 +86,26 @@ const EducationInput = ({ educationInfo, setEducationInfo }) => {
                   type="month"
                   id={`endInput`}
                   value={endDate || ""}
+                  disabled={stillAttending}
                   onChange={(e) =>
                     handleInputChange(id, "endDate", e.target.value)
                   }
                 />
               </div>
+            </div>
+            <div style={{ padding: "10px" }} className="stillCheckBox">
+              <label htmlFor={`stillAttending`}>Still Working Here:</label>
+              <input
+                type="checkbox"
+                id={`stillAttending`}
+                checked={stillAttending || false}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    handleInputChange(id, "endDate", "");
+                  }
+                  handleInputChange(id, "stillAttending", e.target.checked);
+                }}
+              />
             </div>
             <button className="deleteButton" onClick={() => handleDelete(id)}>
               Delete

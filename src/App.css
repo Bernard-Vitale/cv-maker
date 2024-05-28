@@ -188,3 +188,8 @@ hr {
 .educationDiv p{
   font-size: 1.1em;
 }
+.stillCheckBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

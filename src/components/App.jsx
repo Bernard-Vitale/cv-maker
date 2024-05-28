@@ -23,6 +23,7 @@ function App() {
       location: "Tech Town, CA",
       startDate: "2020-11",
       endDate: "2024-05",
+      stillAttending: false,
     },
   ]);
 
@@ -34,6 +35,7 @@ function App() {
       location: "New York, USA",
       startDate: "2023-01",
       endDate: "2024-03",
+      stillWorking: false,
       description:
         "As a Software Engineer at Google, I developed and maintained scalable web applications using React and Node.js, resulting in a 30% increase in user engagement. Additionally, I collaborated with cross-functional teams to design and implement new features, enhancing product functionality and user experience. Furthermore, I led a team of 5 engineers in the successful migration of legacy systems to modern cloud-based infrastructure, reducing operational costs by 20%. Moreover, I implemented CI/CD pipelines using Jenkins and Docker, accelerating the release cycle by 50%.",
     },

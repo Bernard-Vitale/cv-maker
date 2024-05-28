@@ -31,9 +31,11 @@ const Resume = ({ personalInfo, educationInfo, workExpInfo, skills }) => {
             </div>
             <div className="locationDate">
               <p>{edu.location}</p>
-              <p style={{ fontStyle: "italic" }}>{`${handleDate(
-                edu.startDate
-              )} - ${handleDate(edu.endDate)}`}</p>
+              <p style={{ fontStyle: "italic" }}>
+                {!edu.stillAttending
+                  ? `${handleDate(edu.startDate)} - ${handleDate(edu.endDate)}`
+                  : `${handleDate(edu.startDate)} - Present`}
+              </p>
             </div>
           </div>
         ))}
@@ -46,7 +48,11 @@ const Resume = ({ personalInfo, educationInfo, workExpInfo, skills }) => {
             <div className="workDivSub">
               <p style={{ fontWeight: "bold" }}>{work.position}</p>
               <p>
-                {`${handleDate(work.startDate)} - ${handleDate(work.endDate)}`}
+                {!work.stillWorking
+                  ? `${handleDate(work.startDate)} - ${handleDate(
+                      work.endDate
+                    )}`
+                  : `${handleDate(work.startDate)} - Present`}
               </p>
             </div>
             <div className="workDivSub">
