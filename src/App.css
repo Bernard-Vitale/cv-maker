@@ -1,0 +1,184 @@
+#mainContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.educationDiv{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.locationDate{
+  text-align: right;
+}
+.educationDiv p{
+  margin: 5px;
+}
+#resumeContainer{
+  width: 50vw;
+}
+.forms{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.forms h3{
+  margin: 0px;
+  margin-bottom: 5px;
+}
+.formItem{
+  padding: 5px;
+
+}
+.formItem label{
+  padding-right: 10px;
+}
+
+#dateInputs{
+  display: flex;
+  justify-content: space-between;
+}
+#dateInputs div{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px black solid;
+  background-color: rgb(201, 201, 201);
+}
+.deleteButton{
+  width: 60%;
+  align-self: center;
+}
+
+.educationForms, .workForms{
+  border-bottom: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+.jobDescription{
+  resize: vertical;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.skillForms, #addSkillForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.skillForms *, #addSkillForm *{
+  margin: 5px;
+}
+.skillForms input, #addSkillForm input{
+  flex: 10;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.skillForms button, #addSkillForm button{
+  flex: 1;
+}
+#skillsFormDiv{
+  display: flex;
+  flex-direction: column;
+}
+#addSkillForm{
+  align-self: center;
+  width: 90%;
+}
+
+#skillsList{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0px;
+  width: 100%;
+}
+#skillsList li{
+  margin-left: 20px;
+
+}
+.inputSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  margin: 10px;
+  padding: 0px;
+  border-radius: 10px;
+}
+.toggleButton{
+  width: 100%;
+  border: none;
+  background-color: rgb(234, 234, 234);
+  text-align: center;
+  text-wrap: wrap;
+  overflow: hidden;
+  text-overflow: none;
+}
+#editContainer{
+  margin: 20px;
+  width: 25vw;
+}
+
+label{
+  font-weight: bold;
+}
+
+.addBtn{
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+#resumeContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.3);
+  height:100vh;
+}
+
+#resumeHeader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#resumeHeader *{
+  margin: 0px;
+}
+
+#educationSection h2, #workSection h2, #skillsSection h2{
+  margin-bottom: 2px;
+}
+hr {
+  border: none;
+  height: 2px;
+  margin-top: 0px;
+  background-color: black;
+  font-weight: bold;
+}
+.workDiv{
+  display: flex;
+  flex-direction: column;
+}
+.workDivSub{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.workDivSub *{
+  margin: 5px;
+}
