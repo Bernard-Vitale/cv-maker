@@ -79,6 +79,7 @@ button{
   margin: 10px;
   padding: 10px;
 }
+
 .jobDescription{
   resize: vertical;
   width: 100%;
@@ -206,6 +207,9 @@ hr {
 .workDiv{
   display: flex;
   flex-direction: column;
+}
+#workLocation{
+  text-align: right;
 }
 .workDivSub{
   display: flex;

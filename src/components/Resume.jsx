@@ -57,7 +57,9 @@ const Resume = ({ personalInfo, educationInfo, workExpInfo, skills }) => {
             </div>
             <div className="workDivSub">
               <p style={{ fontStyle: "italic" }}>{work.company}</p>
-              <p style={{ fontStyle: "italic" }}>{work.location}</p>
+              <p id="workLocation" style={{ fontStyle: "italic" }}>
+                {work.location}
+              </p>
             </div>
             <p>{work.description}</p>
           </div>
